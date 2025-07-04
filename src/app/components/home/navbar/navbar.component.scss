@@ -1,0 +1,188 @@
+@import '../../../../styles.scss';
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $main-Color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $pink-Color;
+
+
+  
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    a{
+      text-decoration: none;
+      color: $main-Color;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary-Color ;
+      }
+    }
+
+  }
+
+  .hamburger {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: $main-Color;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $secondary-Color;
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: $pink-Color;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &.open {
+    left: 0;
+  }
+
+  .close-btn {
+    font-size: 1.5rem;
+    text-align: right;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: $main-Color;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    &:hover {
+      color: $secondary-Color;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 1rem 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #5D3A58;
+      transition: color 0.3s ease;
+      &:hover {
+        color: $secondary-Color;
+      }
+    }
+  }
+}
+
+
+//searchbar styles
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: $secondary-Color;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #FAF9F6;
+  --border-color: #5D3A58;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}

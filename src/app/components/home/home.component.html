@@ -1,0 +1,140 @@
+<section class="home">
+  <section class="carousel-container">
+    <!-- Slides -->
+    <div class="carousel">
+      <div
+        class="slide"
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === currentSlide"
+      >
+        <div class="text">
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.description }}</p>
+          <button>Explore</button>
+        </div>
+        <img [src]="slide.image" alt="Slide Image" />
+      </div>
+    </div>
+
+    <div class="carousel-dots">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        class="dot"
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"
+      >
+      </span>
+    </div>
+  </section>
+
+  <section class="products-container ">
+    <h3>Our Products</h3>
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 productCard">
+          <div class="productCard-content">
+            <img src="assets/hero1.jpg" alt="" class="w-100" />
+            <p class="productPrice"><span>9999 </span>Egp</p>
+            <p class="productDescription single-line-ellipsis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              ipsum porro ullam praesentium non error id impedit repellat
+              dignissimos. Numquam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="shopAllButton">Shop All</button>
+  </section>
+
+  <section class="square-carousel">
+  <h3>Shop by Occasion</h3>
+  <div class="carousel-wrapper" #carousel>
+  <div class="carousel-track">
+    <div class="carousel-card" *ngFor="let slide of squareSlides">
+      <img [src]="slide.image" [alt]="slide.alt" draggable="false" />
+    </div>
+  </div>
+</div>
+</section>
+
+</section>
